@@ -1,0 +1,18 @@
+<div class="form-container">
+    <form [formGroup]="farmacosForm">
+      <div class="form-group">
+        <label for="idFarmacos">ID Farmacos:</label>
+        <input type="number" formControlName="idFarmacos" id="idFarmacos" name="idFarmacos" required>
+      </div>
+      <div class="form-group">
+        <label for="nomFarmaco">Nombre del Farmaco:</label>
+        <input type="text" formControlName="nomFarmaco" id="nomFarmaco" name="nomFarmaco" required>
+      </div>
+      <div class="form-group">
+        <label for="cantidadFarmaco">Cantidad del Farmaco:</label>
+        <input type="text" formControlName="cantidadFarmaco" id="cantidadFarmaco" name="cantidadFarmaco" required>
+      </div>
+      <button type="submit">Guardar</button>
+    </form>
+  </div>
+  

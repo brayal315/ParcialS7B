@@ -1,0 +1,43 @@
+<form [formGroup]="clientForm" novalidate (ngSubmit)="onSubmit()">
+    <mat-card class="client-card">
+      <mat-card-header>
+        <mat-card-title>Información del Cliente</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Nombre" formControlName="nomClientes">
+              <mat-error *ngIf="clientForm.controls['nomClientes'].hasError('required')">
+                El nombre del cliente es <strong>obligatorio</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <textarea matInput placeholder="Dirección" formControlName="dirrecionClientes"></textarea>
+              <mat-error *ngIf="clientForm.controls['dirrecionClientes'].hasError('required')">
+                La dirección del cliente es <strong>obligatoria</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Estado" formControlName="estadoClientes">
+              <mat-error *ngIf="clientForm.controls['estadoClientes'].hasError('required')">
+                El estado del cliente es <strong>obligatorio</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" type="submit">Enviar</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+  
